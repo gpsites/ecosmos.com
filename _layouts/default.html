@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.css'>
+    <title>
+      {{ page.title }}{% if page.subtitle %}: {{ page.subtitle }}{% endif %}
+      {% if page.author %}({{ page.author }}){% endif %}
+    </title>
+  </head>
+
+  <body>
+    <header>
+      <h2>{{ page.title }}
+        {% if page.subtitle %}
+          <span>{{ page.subtitle }}</span>
+        {% endif %}
+      </h2>
+      {% if page.author %}
+      <h4>{{ page.author }}
+        {% if page.date %}
+          <span>{{ page.date }}</span>
+        {% endif %}
+      </h4>
+      {% endif %}
+    </header>
+
+    <section>
+      {{ content }}
+    </section>
+
+    {% if page.note %}
+    <footer>
+      {{ page.note }}
+    </footer>
+    {% endif %}
+  </body>
+</html>

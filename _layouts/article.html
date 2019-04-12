@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/article.css">
+    <title>
+      {{ page.title }}{% if page.subtitle %}: {{ page.subtitle }}{% endif %}
+      {% if page.author %}({{ page.author }}){% endif %}
+    </title>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        {{ page.title }}
+        {% if page.subtitle %}
+          <span>{{ page.subtitle }}</span>
+        {% endif %}
+      </h1>
+      {% if page.author %}
+        <div class="byline">
+          {% if page.email %}
+            <address class="author"><a href="mailto:{{page.email}}">{{page.author}}</a></address>
+          {% else %}
+            <address class="author">{{ page.author }}</address>
+          {% endif %}
+          {% if page.date %}
+            <time>{{ page.date }}</time>
+          {% endif %}
+          </address>
+        </div>
+      {% endif %}
+    </header>
+
+    <section>
+      {{ content }}
+    </section>
+
+    {% if page.note %}
+    <footer>
+      {{ page.note }}
+    </footer>
+    {% endif %}
+  </body>
+</html>
