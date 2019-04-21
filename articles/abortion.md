@@ -44,15 +44,15 @@ human, unique, and alive.
 
 However, in itself that is not significant to personhood: A cancerous tumor is genetically unique
 and has human DNA, but it is certainly not something which has rights --- in fact, it is the sort
-of thing we strive to kill. And on the other hand, twins are *not *composed ofgenetically unique
+of thing we strive to kill. And on the other hand, twins are *not* composed ofgenetically unique
 human tissue, yet they *are* clearly people with rights that must be recognized and protected. So
 being composed of genetically unique human tissue can itself have nothing whatever to do with the
 correct criteria for personhood.
 
 But it is significant that a fertilized human egg has the power to become a human being who is
 fully formed and developed and a person living independently of its parents. That is, the
-fertilized egg is clearly a *potential *human being which, under the right circumstances, will
-become an *actual*human being who can be born and continue developing into adulthood.
+fertilized egg is clearly a *potential* human being which, under the right circumstances, will
+become an *actual* human being who can be born and continue developing into adulthood.
 
 Of course a potential is just that --- a potential, not an actual. An acorn has the potential to
 become an oak tree, under the right circumstances. But a potential tree is not an actual tree:
@@ -147,7 +147,7 @@ rights are for. It is most obvious at maturity that humans require freedom to id
 the values necessary to sustain their lives.¹⁰
 
 The fact to highlight here is how being fully-developed and -functioning is likewise not a
-criterion for personhood: We recognize and protect rights in those who are *not *functioning humans
+criterion for personhood: We recognize and protect rights in those who are *not* functioning humans
 currently exercising their distinctively human faculties; people do not lose their fundamental
 rights by merely becoming unconscious, disabled, or profoundly dependent as in the life-support
 example above. And similarly, we recognize the basic rights of those whose faculties are *not fully
@@ -158,7 +158,7 @@ pregnancy] and multiply rapidly around week 28, continuing at a rapid pace up un
 after birth"¹¹). More to the issue, even young children would be excluded from recognition as they
 have not yet developed the most important and distinctively human faculty of all, the one that
 makes rights both possible and necessary in the first place: *rationality*, the basic tool of human
-survival*.¹²* Our capacity for conceptual cognition and moral agency (volition) does not arrive
+survival.¹² Our capacity for conceptual cognition and moral agency (volition) does not arrive
 until years after birth.¹³
 
 So being fully developed and fully functioning are not necessary for personhood. Before turning to
@@ -171,7 +171,7 @@ interests that exists among rational agents. They codify the fact that we humans
 live together in a non-sacrificial manner with no masters and no slaves --- that we have absolutely
 no unchosen duty to serve as the means to others' pursuit of life and happiness. Respecting rights
 demands the negative obligation of refraining from coercive interference in others' pursuit of life
-and happiness.¹⁴ So a valid account of rights and abortion cannot posit *unchosen *positive
+and happiness.¹⁴ So a valid account of rights and abortion cannot posit *unchosen* positive
 obligations or duties for anyone, to anyone --- whether the parties are adult, child, or unborn.
 
 That is, all positive obligations arise by choice in a rights-respecting society. We are not
@@ -181,16 +181,16 @@ routinely do choose to accept obligations to others in the course of pursuing th
 possible to those living in a proper, rights-respecting society.¹⁵ It is important to note that
 undertaking obligations does not mean any limitation or ceding of one's inalienable rights; indeed,
 adopting positive obligations is an expression and affirmation of rights. And one can violate
-another's rights by *failing *in one's (necessarily voluntary) positive obligations.
+another's rights by *failing* in one's (necessarily voluntary) positive obligations.
 
-Consider that people can *explicitly *adopt responsibility for helping others, as with police and
+Consider that people can *explicitly* adopt responsibility for helping others, as with police and
 firefighters: in a free society of course these people have no automatic duty to protect or rescue
 anyone. But once they agree to do so, it becomes a rights violation to then arbitrarily withhold
 protection and rescue efforts as needed to their clients. (Unless doing their jobs would mean
 sacrificing their own lives, of course. While accepting such a job could entail agreeing to engage
 in extraordinarily risky activity, it cannot require outright suicide.)
 
-And people can also *implicitly *adopt responsibility for caring for others: If Bob decides to take
+And people can also *implicitly* adopt responsibility for caring for others: If Bob decides to take
 Mary for a ride out to sea, he does not have the right to then order her off his boat to her
 death.¹⁶ That would be murder because Bob chose to bring Mary --- another person --- into a state
 of vital dependence on him. Mary's rights would be violated by then arbitrarily removing his
@@ -287,7 +287,7 @@ philosophers.²⁶
 
 It is interesting that, if the start of the third trimester indeed marks the developmental point
 for attainment of personhood, this would result in my arguing for an outcome which roughly agrees
-with the Supreme Court's 1973 *Roe v. Wade *bottom line that a woman may abort her pregnancy for
+with the Supreme Court's 1973 *Roe v. Wade* bottom line that a woman may abort her pregnancy for
 any reason until the fetus reaches viability (which the Court took to be at about seven months or
 28 weeks), while abortion after viability must be available when needed to protect the woman's life
 or health.²⁷ Unfortunately as explained above, the point the Court argued for was characterized
@@ -300,7 +300,7 @@ pregnancy and parenthood.
 
 ### Conclusion
 
-Prior to the point of being an essentially formed human being --- of actually *being *a human
+Prior to the point of being an essentially formed human being --- of actually *being* a human
 being --- an embryo can have no rights to be recognized or violated. So the pregnant woman must be
 left legally free as a matter of right to choose whether to carry an embryo to the point of
 personhood. After that point, the fetus is a human being with the attendant basic human rights, and

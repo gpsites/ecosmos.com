@@ -10,7 +10,7 @@ layout: article
 ### People know the consequences of sex, so the woman is choosing to make a fertilized egg dependent on her. Doesn't that introduce an obligation from CONCEPTION to independence and eliminate reproductive rights?
 
 No. Merely having something dependent on you is notwhat's essential here --- you have no obligation
-to a tapeworm that you dependent on you, for example. And being *responsible *for the dependence
+to a tapeworm that you dependent on you, for example. And being *responsible* for the dependence
 doesn't itself create an obligation, either: my choosing to take a puppy home from the pet store
 leaves it dependent on me, yet that can't create any (proper) legal obligation to it because a
 puppy is not the sort of thing that can have rights. (Of course, neglecting or abusing one's puppy
@@ -185,7 +185,7 @@ measures to be taken, and so on. Wanting to avoid watching Bob's long death woul
 turning it into a short one.
 
 It isn't so uncommon to travel a terminal path with others, often loved ones, and it certainly
-takes a toll on us psychologically --- but such a toll is *not *the primary element of a decision
+takes a toll on us psychologically --- but such a toll is *not* the primary element of a decision
 to "pull the plug." There are a lot of complicating factors for properly determining when that is
 called for, and this is the sort of circumstance-driven decision where we rightly require due
 diligence: Diagnoses and projections can go wrong, so carefully verifying them is called for; then
@@ -223,7 +223,7 @@ It is of course only speculation, but their (uncharacteristic) cloudiness in thi
 stem from grasping, at least implicitly, certain late-term facts, but also appropriately taking
 care to guard against any possible undermining of the fact that people have no unchosen obligations
 in a free society and that individual rights are absolutes. An uncompromising recognition of these
-basic truths could be threatened by any possibility of an *unchosen *obligation to a developing
+basic truths could be threatened by any possibility of an *unchosen* obligation to a developing
 fetus, and by any "clash" or need for "balancing", "trading off", or otherwise compromising on
 rights between fetus and mother.
 
@@ -256,7 +256,7 @@ Answers* pp.126--127
 > Abortion is a moral right --- which should be left to the sole discretion of the woman involved;
 > morally, nothing other than her wish in the matter is to be considered.
 
---- Ayn Rand, "Of Living Death", 1968, *The* *Virtue of Selfishness* pp.58--59. Also, cited by
+--- Ayn Rand, "Of Living Death", 1968, *The Virtue of Selfishness* pp.58--59. Also, cited by
 Leonard Peikoff regarding abortion in his book *Objectivism* (see below).
 
 > A human being is a living entity; life starts at birth. An embryo is a potential human being. You
