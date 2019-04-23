@@ -9,7 +9,7 @@ layout: article
 
 ### People know the consequences of sex, so the woman is choosing to make a fertilized egg dependent on her. Doesn't that introduce an obligation from CONCEPTION to independence and eliminate reproductive rights?
 
-No. Merely having something dependent on you is notwhat's essential here --- you have no obligation
+No. Merely having something dependent on you is not what's essential here --- you have no obligation
 to a tapeworm that you dependent on you, for example. And being *responsible* for the dependence
 doesn't itself create an obligation, either: my choosing to take a puppy home from the pet store
 leaves it dependent on me, yet that can't create any (proper) legal obligation to it because a
@@ -72,7 +72,7 @@ being a parent. In all such cases, they are pursuing their values *by voluntari
 commitment to someone else that entails personal risks* --- and in all such cases we can, have, and
 will continue to develop appropriate legal standards for those challenging circumstances where we
 have to draw the tragic line between upholding our chosen commitments to other people vs.
-sacrificing our lives.
+defending our own lives.
 
 So the above is not any argument against (or for) the sensibility of fetal personhood. It is
 perhaps a call for clarifying the meaning of significant commitments like those entailed in

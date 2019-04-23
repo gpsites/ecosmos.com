@@ -386,8 +386,7 @@ of the basic human rights of all as absolutes, never to be compromised or abridg
     with the publication of his book *Objectivism: The Philosophy of Ayn Rand*, he was asked about
     when a potential human being becomes an actual human being and briefly discussed a point like
     this before birth. [Leonard Peikoff, 1991--1992, "Advanced Seminars on *Objectivism: The
-    Philosophy of Ayn Rand*," Lecture 14 Disk 1, 34:00. See a transcript at
-    <http://bit.ly/ZwkqEm>.]
+    Philosophy of Ayn Rand*," Lecture 14 Disk 1, 34:00. See a transcript [here](abortion-faq).]
 22. Wikipedia, "Prenatal Development," available online at <http://bit.ly/1sufPg9>.
 23. todo: work out ref from... - Stephen Jay Gould, [*Ontogeny and
     Phylogeny*](http://bit.ly/1F4PCeN) (Cambridge, Mass: Belknap Press). p.206. - Wikipedia,
