@@ -44,7 +44,7 @@ genetically human, unique, and alive.
 
 However, in itself that is not significant to personhood: A cancerous tumor is genetically unique
 and has human DNA, but it is certainly not something which has rights --- in fact, it is the sort
-of thing we strive to kill. And on the other hand, twins are *not* composed ofgenetically unique
+of thing we strive to kill. And on the other hand, twins are *not* composed of genetically unique
 human tissue, yet they *are* clearly people with rights that must be recognized and protected. So
 being composed of genetically unique human tissue can itself have nothing whatever to do with the
 correct criteria for personhood.
@@ -83,7 +83,7 @@ The trouble stems from losing sight of the fact that our fundamental rights are 
 from the metaphysical facts of human nature --- not from anything that might flow from, be defined
 in terms of, or depend in any way upon what our technology happens to make possible in any given
 era. Rights arise from the kind of things we *are*, not what technology enables for us; they are a
-recognition of the essential kinds of actions necessary for us to maintain our existenceas humans,
+recognition of the essential kinds of actions necessary for us to maintain our existence as humans,
 no matter our technological capabilities. The Court was no doubt working from at least an implicit
 understanding that the biological facts of the developing embryo are important, and the capacity to
 maintain one's existence as an independent organism is clearly important to human nature and
@@ -229,8 +229,8 @@ not unique to pregnancy: this is no different in principle from a boat passenger
 mortal threat to the captain, whether by purposeful design or random disease. The captain has the
 right to self-defense and may rightly eliminate the threat which came to him.
 
-In general, every mortal "clash" between an unborn person and its mother must be approached in the
-same manner as we approach *any* such conflict involving people and their rights: under the banner
+In general, every mortal clash between an unborn person and its mother must be approached in the
+same manner we approach *any* such conflict involving people and their rights: under the banner
 of the government's legal system. Its purpose is to resolve the endless challenging questions
 around just what constitutes a rights violation or threat, and just what is and is not a
 permissible response to such --- all by reference to broad legal principles that address much more
@@ -389,8 +389,8 @@ of the basic human rights of all as absolutes, never to be compromised or abridg
     Philosophy of Ayn Rand*," Lecture 14 Disk 1, 34:00. See a transcript at
     <http://bit.ly/ZwkqEm>.]
 22. Wikipedia, "Prenatal Development," available online at <http://bit.ly/1sufPg9>.
-23. todo: work out ref from... - Stephen Jay Gould,[*Ontogeny and
-    Phylogeny*](http://bit.ly/1F4PCeN)(Cambridge, Mass: Belknap Press). p.206. - Wikipedia,
+23. todo: work out ref from... - Stephen Jay Gould, [*Ontogeny and
+    Phylogeny*](http://bit.ly/1F4PCeN) (Cambridge, Mass: Belknap Press). p.206. - Wikipedia,
     "[Mammalian embryogenesis](http://en.wikipedia.org/wiki/Mammalian_embryogenesis)" - Nova,
     "[Morphing Embryos](http://www.pbs.org/wgbh/nova/odyssey/clips)" - Wikipedia, "[Prenatal
     development: Embryonic
