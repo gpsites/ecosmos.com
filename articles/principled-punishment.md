@@ -2,7 +2,7 @@
 title: Principled Punishment and the Death Penalty
 subtitle: Toward Objective Responses to Misdeeds
 author: Greg Perkins
-email: greg@ecosmos.com
+contact: /
 date: July 2008
 note: Originally published on Diana Hsieh's blog Noodlefood in July of 2008.
 layout: article

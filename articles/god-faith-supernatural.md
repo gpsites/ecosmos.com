@@ -2,7 +2,7 @@
 title: God, Faith, and the Supernatural
 subtitle: The Objectivist Perspective
 author: Greg Perkins
-email: greg@ecosmos.com
+contact: /
 date: May 2003
 note: This talk was originally delivered in July 2003, then transcribed and cleaned up in May 2005.
 layout: article

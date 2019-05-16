@@ -2,7 +2,7 @@
 title: Don't Steal This Article!
 subtitle: On the Libertarian Critique of Intellectual Property
 author: Greg Perkins
-email: greg@ecosmos.com
+contact: /
 date: May 2006
 note: Originally published in Axiomatic Magazine in May 2006
 layout: article

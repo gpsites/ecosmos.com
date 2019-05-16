@@ -2,7 +2,7 @@
 title: Abortion Rights and Parental Obligations
 subtitle: An Objectivist Account
 author: Greg Perkins
-email: greg@ecosmos.com
+contact: /
 date: July 2009
 layout: article
 ---

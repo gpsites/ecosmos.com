@@ -1,5 +1,5 @@
 ---
-title: Some of my Best Articles
+title: Some of My Articles
 subtitle: Greg Perkins
 layout: article
 ---

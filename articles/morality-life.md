@@ -2,7 +2,7 @@
 title: Morality and Life
 subtitle: Why the New Atheists Can't Even Beat D'Souza 
 author: Greg Perkins
-email: greg@ecosmos.com
+contact: /
 date: May 2008
 note: Originally published on Diana Hsieh's blog NoodleFood in May of 2008.
 layout: article

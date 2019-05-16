@@ -2,7 +2,7 @@
 title: Q&A / Abortion Rights and Parental Obligations
 subtitle: Discussion of my Article on Reproductive Rights
 author: Greg Perkins
-email: greg@ecosmos.com
+contact: /
 date: July 2009
 layout: article
 ---

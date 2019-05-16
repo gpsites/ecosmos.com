@@ -2,7 +2,7 @@
 title: Libertarian vs. Objectivist Thinking
 subtitle: Why Objectivists Reject Libertarianism
 author: Greg Perkins
-email: greg@ecosmos.com
+contact: /
 date: November 2009
 note: Originally posted on Diana Hsieh's blog, NoodleFood, November 2009.
 layout: article
