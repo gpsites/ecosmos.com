@@ -42,6 +42,12 @@ div.byline time {
   color: #888;
 }
 
+hr {
+  width: 20%;
+  border-style: solid none none none;
+  color: #888;
+}
+
 sup {
   font-size: small;
 }
