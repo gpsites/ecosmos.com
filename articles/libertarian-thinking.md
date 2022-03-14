@@ -84,25 +84,25 @@ have framed it as the pinnacle of libertarianism.
 We can now appreciate what Rand was signaling with her outrage at being grouped or associated in
 any way with [anarchists](http://aynrandlexicon.com/lexicon/anarchism.html) in particular and
 libertarians in general: she was refusing the mental, personal, and social chaos that flows from a
-fundamentally flawed way of seeing things. Rand understood that the essential concept in politics
+fundamentally flawed way of grasping things. Rand understood that the essential concept in politics
 is individual rights, and so she identified totalitarianism and anarchism as indistinguishable in
 what's important: their complete lack of an objective recognition and systematic protection of
-man's rights. In contrast, as noted above, the libertarian way of thinking mis-classifies
+human rights. In contrast, as noted above, the libertarian way of thinking mis-classifies
 totalitarianism and anarchism as moral opposites by focusing on the inessential characteristic of
 size. If the purpose of politics is to sort out and enact the conditions required for people to
 successfully live among one another, this kind of confusion is about as disastrous as it
-gets --- even while self-consciously seeking the good, the conceptual lens of libertarianism will
-drive you to its opposite.
+gets --- even while self-consciously seeking the good, the conceptual lens of libertarianism drives
+you in the opposite direction.
 
 And conversely, the libertarian framework fails to capture crucial differences. Consider a powerful
-government that performs *all and only* its proper functions in the defense of man's rights, and
+government that performs *all and only* its proper functions in the defense of individual rights, and
 one that happens to have all the same laws and institutions but also has, say, conscription on the
 books just in case war breaks out. These two governments are all but indistinguishable (and neither
 is smiled on) in the libertarians' basic classification scheme based on size. But Objectivists see
-these two as moral opposites because one is committed to the essential task of the defense of man's
+these two as moral opposites because one is committed to the essential task of the defense of 
 rights and the other is not. Even though not currently violating any rights, the government with
 conscription laws clearly rejects the key principle of the field. It has no principled defense
-against the slippery slope to serfdom we've seen play out in history all too many times.
+against a slippery slope to serfdom.
 
 The politics of liberty that Objectivism advocates really does depend on a particular philosophical
 foundation. The Libertarian movement might be in a better position to understand this if they
