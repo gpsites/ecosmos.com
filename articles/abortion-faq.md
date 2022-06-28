@@ -10,7 +10,7 @@ layout: article
 ### People know the consequences of sex, so the woman is choosing to make a fertilized egg dependent on her. Doesn't that introduce an obligation from CONCEPTION to independence and eliminate reproductive rights?
 
 No. Merely having something dependent on you is not what's essential here --- you have no obligation
-to a tapeworm that you dependent on you, for example. And being *responsible* for the dependence
+to a tapeworm that is dependent on you, for example. And being *responsible* for the dependence
 doesn't itself create an obligation, either: my choosing to take a puppy home from the pet store
 leaves it dependent on me, yet that can't create any (proper) legal obligation to it because a
 puppy is not the sort of thing that can have rights. (Of course, neglecting or abusing one's puppy
@@ -27,7 +27,7 @@ human beings aren't actual human beings and can have no rights, any more than ta
 and rocks --- so there can be no legitimate legal obligations to them. Actual human beings have
 rights, so it is possible to have obligations to them. In choosing to let her pregnancy proceed to
 the point of personhood, the mother is bringing a person *into* a state of vital dependence on
-her --- and so she has adopted an obligation to deliver that person *from* that dependence on her.
+her --- and so she has adopted an obligation to safely deliver that person *from* that dependence.
 
 ### Don't late-term threats to the health of mothers invalidate your account?
 
@@ -209,7 +209,7 @@ that point (1968), that life starts at birth (1971) --- but yet pondered the
 capacity for consciousness before birth (1967) and the medical status of the entity's life at six
 to eight months (1971), then qualified its application, saying that abortion at the "last minute"
 of a baby or child that is formed is a "different issue" than eliminating a mere potential (1974),
-and that one may argue about the later stages of pregnancy (1975). Her last available statement on
+and that one "may argue about the later stages of pregnancy" (1975). Her last available statement on
 the matter (1976) explicitly endorses the Supreme Court's *Roe v. Wade* decision of 1973, which
 permits unrestricted abortion through the second trimester while allowing severe restrictions on
 abortions in the final trimester.
