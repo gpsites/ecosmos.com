@@ -214,7 +214,7 @@ the matter (1976) explicitly endorses the Supreme Court's *Roe v. Wade* decisi
 permits unrestricted abortion through the second trimester while allowing severe restrictions on
 abortions in the final trimester.
 
-And Peikoff wrote in his book *Objectivism* that rights cannot belong to fetuses (1991) --- yet
+Peikoff wrote in his book *Objectivism* that rights cannot belong to fetuses (1991) --- yet
 when a student asked him to clarify the actualization of personhood, he discussed a "borderline
 area" where this could in fact hold before birth, in fetuses (1992). All of these referenced quotes
 are included below for further exploration.
