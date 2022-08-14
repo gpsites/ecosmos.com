@@ -27,7 +27,7 @@ However, the Copenhagen interpretation of quantum fact (currently quite fashiona
 is the source of what I suspect you are asking about: the widespread notion that 
 quantum scientists have demonstrated that things in the world are somehow radically 
 dependent upon consciousness for their identities and very existence 
-(that an "observation" will "collapse the wave function" to use their lingo, 
+(that an "observation" will "collapse the wave function," to use their lingo, 
 transforming some patch of existence from an indeterminate statistical fog into something concrete and determinate). 
 Or that reality is inherently contradictory (an implication drawn from "wave-particle duality" and other quantum phenomena) -- 
 or that causality doesn't hold or can work in reverse, etc. 
