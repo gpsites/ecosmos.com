@@ -23,3 +23,6 @@ layout: article
   * [Science vs. Miracles](science-miracles)
   * [The Gap in Religious Thought](god-of-the-gaps)
   * [Morality and Life](morality-life)
+
+## Miscellaneous
+* ### [Is quantum physics compatible with reason and Objectivism?](copenhagen-interpretation)
