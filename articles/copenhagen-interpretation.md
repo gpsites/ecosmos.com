@@ -12,7 +12,7 @@ layout: article
 
 Why or why not?
 
-* Objectivist Answers question by Cerman on October 5, 2010
+* Objectivist Answers question by Cherman on October 5, 2010
 
 ### Answer
 
@@ -52,8 +52,4 @@ Objectivists are of course not threatened by this kind of confusion.
 Indeed, in clarifying the basic relationship between philosophy and the special sciences, 
 Objectivism provides a powerful tonic against unproductive blind alleys like the 
 Copenhagen interpretation of QM, even putting scientists in a better position to do great science.
-
-For further discussion of this inversion of the relationship between science and philosophy, 
-you can watch this lecture (available free online): ["The Crisis in Physics -- And Its Cause"](https://www.aynrand.org/site/PageServer?pagename=reg_ls_physics&JServSessionIdr007=pn1gsniz25.app1a)
-by David Harriman, an Objectivist philosopher and physicist.
 
