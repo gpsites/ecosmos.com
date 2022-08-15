@@ -17,8 +17,10 @@ Why or why not?
 ## Answer
 
 	
-Quantum physics is a legitimate field of study and as such it is reliant on reason (and of course compatible with Objectivism). 
-The domain seems quite strange and counterintuitive, but new and strange phenomena don't conflict with reason per se --- 
+Quantum physics is a legitimate field of study and as such it is reliant on reason 
+(and of course compatible with Objectivism). 
+The domain seems quite strange and counterintuitive, 
+but new and strange phenomena don't conflict with reason per se --- 
 everything we now rationally understand started out as new and strange, after all.
 
 We need to distinguish between quantum fact and quantum interpretation. 
