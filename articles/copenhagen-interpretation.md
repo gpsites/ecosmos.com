@@ -14,8 +14,8 @@ Why or why not?
 
 --- *Objectivist Answers question by Cherman on October 5, 2010*
 
-## Answer
 
+#### Answer
 	
 Quantum physics is a legitimate field of study and as such it is reliant on reason 
 (and of course compatible with Objectivism). 
