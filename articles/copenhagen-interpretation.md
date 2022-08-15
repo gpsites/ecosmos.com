@@ -8,7 +8,7 @@ note: Originally published on Objectivist Answers.
 layout: article
 ---
 
-## Is quantum physics compatible with reason and Objectivism?
+### Is quantum physics compatible with reason and Objectivism?
 
 Why or why not?
 
