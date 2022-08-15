@@ -12,7 +12,7 @@ layout: article
 
 Why or why not?
 
-* Objectivist Answers question by Cherman on October 5, 2010
+--- *Objectivist Answers question by Cherman on October 5, 2010*
 
 ## Answer
 
