@@ -39,7 +39,7 @@ can reliably identify a bad legal argument if it involves a logical fallacy).
 The Copenhagen interpretation is only an expression of bad philosophy masquerading as science.
 
 The key to seeing this lies in understanding how science as a discipline is an 
-outgrowth of and utterly dependent on a certain metaphysics -- one which at least implicitly recognizes 
+outgrowth of and utterly dependent on a certain metaphysics --- one which at least implicitly recognizes 
 the philosophical [axioms](http://aynrandlexicon.com/lexicon/axioms.html) Rand explicitly 
 identified as Existence, Identity (including Causality), Consciousness, and the essential relationship they 
 entail of the [primacy of existence over consciousness](http://aynrandlexicon.com/lexicon/primacy_of_existence_vs_primacy_of_consciousness.html) 
