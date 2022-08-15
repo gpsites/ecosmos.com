@@ -1,5 +1,5 @@
 ---
-title: QM and the Copenhagen Interpretation
+title: Objectivism and the Copenhagen Interpretation
 subtitle:  
 author: Greg Perkins
 contact: /
@@ -8,17 +8,17 @@ note: Originally published on Objectivist Answers.
 layout: article
 ---
 
-### Is quantum physics compatible with reason and Objectivism?
+## Is quantum physics compatible with reason and Objectivism?
 
 Why or why not?
 
 * Objectivist Answers question by Cherman on October 5, 2010
 
-### Answer
+## Answer
 
 	
 Quantum physics is a legitimate field of study and as such it is reliant on reason (and of course compatible with Objectivism). 
-The domain seems quite strange and counterintuitive, but new and strange phenomena don't conflict with reason per se -- 
+The domain seems quite strange and counterintuitive, but new and strange phenomena don't conflict with reason per se --- 
 everything we now rationally understand started out as new and strange, after all.
 
 We need to distinguish between quantum fact and quantum interpretation. 
@@ -29,7 +29,7 @@ the widespread notion that quantum scientists have demonstrated that things in t
 are somehow radically dependent upon consciousness for their identities and very existence 
 (that an "observation" will "collapse the wave function," to use their lingo, 
 transforming some patch of existence from an indeterminate statistical fog into something concrete and determinate). 
-Or that reality is inherently contradictory (an implication drawn from wave-particle duality and other quantum phenomena) -- 
+Or that reality is inherently contradictory (an implication drawn from wave-particle duality and other quantum phenomena) --- 
 or that causality doesn't hold or can work in reverse, etc. 
 These ideas would certainly be in conflict with Objectivism, but Objectivists brush them aside as mistakes 
 (mistakes that can be reliably identified by non-physicists, much like a non-lawyer 
