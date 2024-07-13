@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple Podcast Feed Inspector</title>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
+  <script defer src="utils.js"></script>
+  <style>
+    .audio-icon {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      vertical-align: middle;
+      font-size: 75px;
+      background: antiquewhite;
+    }
+
+    .highlight {
+      background-color: yellow;
+    }
+
+    .clickable {
+      cursor: pointer;
+    }
+
+    .downloading {
+      outline: 5px dashed red;
+      cursor: wait !important;
+    }
+
+    .downloading>a {
+      cursor: wait !important;
+    }
+
+    .clickable img {
+      width: 200px;
+      height: 200px;
+      display: block;
+    }
+
+    .clickable {
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body x-data="podcastFinder()" class="container">
+  <header>
+    <h1>Apple Podcast Feed Inspector</h1>
+    <p><small><i>Click on assets to download. Click on text blocks to copy to your clipboard.</small></i></p>
+    <form @submit.prevent="findFeedUrl">
+      <fieldset role="group">
+        <input type="text" placeholder="Apple Podcast URL" id="url" x-model="url" required>
+        <button type="submit">Retrieve</button>
+      </fieldset>
+    </form>
+  </header>
+  <main>
+    <div x-show="feed">
+      <h2 x-text="feed.title" class="clickable" @click="copyText"></h2>
+      <p><small x-text="feedUrl" class="clickable" @click="copyText"></small> <small>(<span
+            x-text="feed.episodes?.length"></span> episodes)</small></p>
+      <p x-text="feed.description" class="clickable" @click="copyText"></p>
+      <div class="clickable"
+        @click.prevent="downloadFile(feed.coverArt, gutils.slug(feed.title) + '.tbd', $event)">
+        <a :href="feed.coverArt" x-show="feed.coverArt">
+          <img :src="feed.coverArt" alt="Cover Art">
+        </a>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div x-show="feed">
+      <template x-for="episode in feed.episodes" :key="episode.guid">
+        <article>
+          <header>
+            <h3 x-text="episode.title" class="clickable" @click="copyText"></h3>
+          </header>
+          <p x-text="episode.pubDate" class="clickable" @click="copyText"></p>
+          <p x-text="episode.description" class="clickable" @click="copyText"></p>
+          <div class="grid">
+            <div x-show="episode.episodeArt">
+              <div class="clickable"
+                @click.prevent="downloadFile(episode.episodeArt, gutils.slug(feed.title, episode.title) + '.tbd', $event)">
+                <a :href="episode.episodeArt">
+                  <img :src="episode.episodeArt" alt="Episode Art">
+                </a>
+              </div>
+            </div>
+            <div x-show="episode.enclosureUrl">
+              <div class="clickable"
+                @click.prevent="downloadFile(episode.enclosureUrl, gutils.slug(feed.title, episode.title) + '.tbd', $event)">
+                <a :href="episode.enclosureUrl">
+                  <div class="audio-icon">🔈</div>
+                </a>
+              </div>
+            </div>
+        </article>
+      </template>
+    </div>
+    <p x-show="error" x-text="'Error: ' + error"></p>
+  </main>
+  <footer>
+  </footer>
+
+  <script>
+    const corsProxy = 'https://corsify.gregperk.workers.dev/?'
+
+    function podcastFinder() {
+      return {
+        url: 'https://podcasts.apple.com/us/podcast/randos-read/id1725933732',
+        appleShowId: '',
+        feedUrl: '',
+        feed: '',
+        error: '',
+        async findFeedUrl() {
+          this.error = ''
+          this.appleShowId = ''
+          this.feedUrl = ''
+          this.feed = ''
+
+          const match = this.url.match(/id(\d+)/)
+          this.appleShowId = match ? match[1] : null
+
+          if (this.appleShowId) {
+            try {
+              const response = await fetch(`${corsProxy}https://itunes.apple.com/lookup?id=${this.appleShowId}&entity=podcast`)
+              const result = await response.json()
+              const info = result?.results?.[0]
+              this.feedUrl = info?.feedUrl || 'Not found'
+
+              if (this.feedUrl !== 'Not found') {
+                const feedResponse = await fetch(corsProxy + this.feedUrl)
+                const feedText = await feedResponse.text()
+                const feedObj = gutils.xml2js(feedText, new Set(), true)
+                const channel = feedObj.rss.channel
+
+                this.feed = {
+                  title: channel.title['#cdata'],
+                  description: channel.description['#cdata'],
+                  coverArt: channel['itunes:image']?.['@href'],
+                  author: channel['itunes:author'],
+                  summary: channel['itunes:summary'],
+                  episodes: channel.item.map(episode => ({
+                    guid: episode.guid?.['#text'],
+                    title: episode.title?.['#cdata'],
+                    description: episode.description?.['#cdata'],
+                    pubDate: episode.pubDate,
+                    enclosureUrl: episode.enclosure?.['@url'],
+                    episodeArt: episode['itunes:image']?.['@href']
+                  }))
+                }
+              }
+            } catch (err) {
+              this.error = err.message
+            }
+          } else {
+            this.error = 'Invalid Apple Podcast URL'
+          }
+        },
+        async downloadFile(url, filename, event) {
+          const clickableElement = event.target.closest('.clickable')
+          if (!clickableElement) {
+            console.error('No clickable element found')
+            return
+          }
+          if (clickableElement.classList.contains('downloading')) return
+          clickableElement.classList.toggle('downloading')
+          try {
+            const newSuffix = url.split('.').pop() // may need to become more sophisticated
+            filename = `${filename.split('.').shift()}.${newSuffix}`
+            const [response, whatevs] = await Promise.all([
+              fetch(corsProxy + url),
+              new Promise(resolve => setTimeout(resolve, 50)) // ensures user will see downloading state
+            ])
+            const blob = await response.blob()
+            const link = document.createElement('a')
+            link.href = URL.createObjectURL(blob)
+            link.download = filename
+            document.body.appendChild(link)
+            link.click()
+            document.body.removeChild(link)
+            URL.revokeObjectURL(link.href)
+          } catch (err) {
+            console.error('Download error:', err)
+          } finally {
+            clickableElement.classList.toggle('downloading')
+            gutils.ding()
+          }
+        },
+        copyText(event) {
+          const target = event.target
+          navigator.clipboard.writeText(target.innerText)
+          target.classList.toggle('highlight')
+          setTimeout(() => {
+            target.classList.toggle('highlight')
+          }, 150)
+        },
+      }
+    }
+
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('podcastFinder', podcastFinder)
+    })
+  </script>
+</body>
+
+</html>
