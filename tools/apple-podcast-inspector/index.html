@@ -7,7 +7,7 @@
   <title>Apple Podcast Feed Inspector</title>
   <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
-  <script defer src="utils.js"></script>
+  <script defer src="gutil.js"></script>
   <style>
     .audio-icon {
       width: 200px;
@@ -63,15 +63,18 @@
   <main>
     <div x-show="feed">
       <h2 x-text="feed.title" class="clickable" @click="copyText"></h2>
-      <p><small x-text="feedUrl" class="clickable" @click="copyText"></small> <small>(<span
-            x-text="feed.episodes?.length"></span> episodes)</small></p>
+      <p>
+        <small x-text="feed.episodes?.length + ' episodes from '"></small>
+        <small x-text="feedUrl" class="clickable" @click="copyText"></small>
+      </p>
       <p x-text="feed.description" class="clickable" @click="copyText"></p>
-      <div class="clickable"
-        @click.prevent="downloadFile(feed.coverArt, gutils.slug(feed.title) + '.tbd', $event)">
+      <p>
+      <div class="clickable" @click.prevent="downloadFile(feed.coverArt, gutil.slug(feed.title) + '.tbd', $event)">
         <a :href="feed.coverArt" x-show="feed.coverArt">
           <img :src="feed.coverArt" alt="Cover Art">
         </a>
       </div>
+      </p>
     </div>
     <br />
     <br />
@@ -86,7 +89,7 @@
           <div class="grid">
             <div x-show="episode.episodeArt">
               <div class="clickable"
-                @click.prevent="downloadFile(episode.episodeArt, gutils.slug(feed.title, episode.title) + '.tbd', $event)">
+                @click.prevent="downloadFile(episode.episodeArt, gutil.slug(feed.title, episode.title) + '.tbd', $event)">
                 <a :href="episode.episodeArt">
                   <img :src="episode.episodeArt" alt="Episode Art">
                 </a>
@@ -94,7 +97,7 @@
             </div>
             <div x-show="episode.enclosureUrl">
               <div class="clickable"
-                @click.prevent="downloadFile(episode.enclosureUrl, gutils.slug(feed.title, episode.title) + '.tbd', $event)">
+                @click.prevent="downloadFile(episode.enclosureUrl, gutil.slug(feed.title, episode.title) + '.tbd', $event)">
                 <a :href="episode.enclosureUrl">
                   <div class="audio-icon">🔈</div>
                 </a>
@@ -137,19 +140,19 @@
               if (this.feedUrl !== 'Not found') {
                 const feedResponse = await fetch(corsProxy + this.feedUrl)
                 const feedText = await feedResponse.text()
-                const feedObj = gutils.xml2js(feedText, new Set(), true)
+                const feedObj = gutil.xml2js(feedText, new Set(), true)
                 const channel = feedObj.rss.channel
 
                 this.feed = {
-                  title: channel.title['#cdata'],
-                  description: channel.description['#cdata'],
+                  title: channel.title['#cdata'] ?? channel.title,
+                  description: channel.description['#cdata'] ?? channel.description,
                   coverArt: channel['itunes:image']?.['@href'],
                   author: channel['itunes:author'],
                   summary: channel['itunes:summary'],
                   episodes: channel.item.map(episode => ({
                     guid: episode.guid?.['#text'],
-                    title: episode.title?.['#cdata'],
-                    description: episode.description?.['#cdata'],
+                    title: episode.title?.['#cdata'] ?? episode.title,
+                    description: episode.description?.['#cdata'] ?? episode.description,
                     pubDate: episode.pubDate,
                     enclosureUrl: episode.enclosure?.['@url'],
                     episodeArt: episode['itunes:image']?.['@href']
@@ -172,8 +175,7 @@
           if (clickableElement.classList.contains('downloading')) return
           clickableElement.classList.toggle('downloading')
           try {
-            const newSuffix = url.split('.').pop() // may need to become more sophisticated
-            filename = `${filename.split('.').shift()}.${newSuffix}`
+            filename = `${filename.split('.').shift()}.${gutil.assetsuffix(url)}`
             const [response, whatevs] = await Promise.all([
               fetch(corsProxy + url),
               new Promise(resolve => setTimeout(resolve, 50)) // ensures user will see downloading state
@@ -190,7 +192,7 @@
             console.error('Download error:', err)
           } finally {
             clickableElement.classList.toggle('downloading')
-            gutils.ding()
+            gutil.ding()
           }
         },
         copyText(event) {

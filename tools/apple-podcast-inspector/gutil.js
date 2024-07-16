@@ -1,12 +1,19 @@
 
-window.gutils = {
+window.gutil = {
   xml2js,
   slug,
+  assetsuffix,
   ding
 }
 
+function assetsuffix(url) {
+  // let's start by just assuming (hoping) filename is last thing before any url queryargs
+  return url.split('?')[0].split('.').pop()
+}
+
+
 // adapted from https://gist.github.com/erikvullings/5c5638842eaa4fa88c0f4a987ea45da2
-// (I basically made it plain JS, suitable for loading in an SPA.)
+// (I just made it plain JS so browsers can use it.)
 function xml2js(xmlStr, excludeKeys = new Set(), jsonifyKeys = false) {
   let xml = new DOMParser().parseFromString(xmlStr, 'text/xml')
   const X = {
