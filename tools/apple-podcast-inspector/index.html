@@ -161,7 +161,7 @@
       <p>
       <div class="clickable" @click.prevent="downloadFile(feed.coverArt, gutil.slug(feed.title) + '.tbd', $event)">
         <a :href="feed.coverArt" x-show="feed.coverArt">
-          <img :src="feed.coverArt" alt="Cover Art">
+          <img :src="feed.coverArt" alt="Cover Art" loading="lazy">
         </a>
       </div>
       </p>
@@ -186,7 +186,7 @@
               <div class="clickable"
                 @click.prevent="downloadFile(episode.episodeArt, gutil.slug(feed.title, episode.title) + '.tbd', $event)">
                 <a :href="episode.episodeArt">
-                  <img :src="episode.episodeArt" alt="Episode Art">
+                  <img :src="episode.episodeArt" alt="Episode Art" loading="lazy">
                 </a>
               </div>
             </div>
