@@ -179,6 +179,7 @@ function ding () {
   gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.5);
 }
 
+
 async function getAppleAPIToken() {
   try {
     const response = await fetch(CORS_PROXY + 'https://podcasts.apple.com/us/podcast/randos-read/id1725933732');
@@ -201,7 +202,6 @@ async function getAppleAPIToken() {
     throw error;
   }
 }
-
 
 function buildRequest(appleAPIToken, applePodcastID, offset) {
   const hostName = 'https://amp-api.podcasts.apple.com'

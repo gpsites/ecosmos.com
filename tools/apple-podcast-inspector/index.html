@@ -152,7 +152,7 @@
   </header>
   <main>
     <div x-show="feed">
-      <h2 x-text="feed.title" class="copyable" @click="copyText"></h2>
+      <h2 x-html="feed.title" class="copyable" @click="copyText"></h2>
       <p>
         <small x-text="feed.episodes?.length + ' episodes from '"></small>
         <small x-text="feedUrl" class="copyable" @click="copyText"></small>
@@ -173,7 +173,7 @@
         <article>
           <header>
             <h3>
-              <span x-text="episode.title" class="copyable" @click="copyText"></span>
+              <span x-html="episode.title" class="copyable" @click="copyText"></span>
               <small x-show="episode.appleURL">
                 <a :href="episode.appleURL" target="_blank" title="visit this episode's Apple Podcast page">🍎</a>
               </small>
