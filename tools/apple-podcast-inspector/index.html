@@ -305,7 +305,7 @@
           }
         },
         copyText(event) {
-          const target = event.target
+          const target = event.target.closest('.copyable')
           navigator.clipboard.writeText(target.innerText)
           target.classList.toggle('highlight')
           setTimeout(() => {
