@@ -53,7 +53,6 @@
       opacity: .6;
     }
 
-
     .clickable {
       cursor: pointer;
       display: inline-block;
@@ -142,7 +141,7 @@
     <p><small><i>Click on assets to download. Click on text blocks to copy to your clipboard.</small></i></p>
     <form @submit.prevent="findFeedUrl">
       <fieldset role="group">
-        <input type="text" placeholder="Apple Podcast URL" id="url" x-model="url" required>
+        <input type="text" placeholder="Apple Podcast ID (or URL, which has the ID)" id="url" x-model="url" required>
         <button type="submit">Retrieve</button>
       </fieldset>
     </form>
@@ -154,10 +153,9 @@
         <small x-text="feed.episodes?.length + ' episodes from '"></small>
         <small x-text="feedUrl" class="copyable" @click="copyText"></small>
       </p>
-      <p x-text="feed.description" class="copyable" @click="copyText"></p>
+      <section x-html="feed.description" class="copyable" @click="copyText"></section>
       <p>
-      <div class="clickable"
-        @click.prevent="downloadFile(feed.coverArt, gutil.slug(feed.title) + '.tbd', $event)">
+      <div class="clickable" @click.prevent="downloadFile(feed.coverArt, gutil.slug(feed.title) + '.tbd', $event)">
         <a :href="feed.coverArt" x-show="feed.coverArt">
           <img :src="feed.coverArt" alt="Cover Art">
         </a>
@@ -170,10 +168,15 @@
       <template x-for="episode in feed.episodes" :key="episode.guid">
         <article>
           <header>
-            <h3 x-text="episode.title" class="copyable" @click="copyText"></h3>
+            <h3>
+              <span x-text="episode.title" class="copyable" @click="copyText"></span>
+              <small x-show="episode.appleURL">
+                <a :href="episode.appleURL" target="_blank" title="visit this episode's Apple Podcast page">🍎</a>
+              </small>
+            </h3>
           </header>
           <p x-text="episode.pubDate" class="copyable" @click="copyText"></p>
-          <p x-text="episode.description" class="copyable" @click="copyText"></p>
+          <section x-html="episode.description" class="copyable" @click="copyText"></section>
           <div class="grid">
             <div x-show="episode.episodeArt">
               <div class="clickable"
@@ -210,8 +213,6 @@
   </footer>
 
   <script>
-    const corsProxy = 'https://corsify.gregperk.workers.dev/?'
-
     function podcastFinder() {
       return {
         url: 'https://podcasts.apple.com/us/podcast/randos-read/id1725933732',
@@ -224,19 +225,20 @@
           this.appleShowId = ''
           this.feedUrl = ''
           this.feed = ''
+          this.appleFeed = []
 
           const match = this.url.match(/id(\d+)/)
           this.appleShowId = match ? match[1] : null
 
           if (this.appleShowId) {
             try {
-              const response = await fetch(`${corsProxy}https://itunes.apple.com/lookup?id=${this.appleShowId}&entity=podcast`)
+              const response = await fetch(`${gutil.CORS_PROXY}https://itunes.apple.com/lookup?id=${this.appleShowId}&entity=podcast`)
               const result = await response.json()
               const info = result?.results?.[0]
               this.feedUrl = info?.feedUrl || 'Not found'
 
               if (this.feedUrl !== 'Not found') {
-                const feedResponse = await fetch(corsProxy + this.feedUrl)
+                const feedResponse = await fetch(gutil.CORS_PROXY + this.feedUrl)
                 const feedText = await feedResponse.text()
                 const feedObj = gutil.xml2js(feedText, new Set(), true)
                 const channel = feedObj.rss.channel
@@ -253,9 +255,18 @@
                     description: episode.description?.['#cdata'] ?? episode.description,
                     pubDate: episode.pubDate,
                     enclosureUrl: episode.enclosure?.['@url'],
-                    episodeArt: episode['itunes:image']?.['@href']
+                    episodeArt: episode['itunes:image']?.['@href'],
                   }))
                 }
+
+                gutil.fetchAllApplePodcastEpisodes(this.appleShowId, this.feed?.episodes?.length).then(appleEpisodeInfo => {
+                  for (const info of appleEpisodeInfo) {
+                    const feedEpisode = this.feed.episodes.find(ep => ep.guid === info.attributes.guid)
+                    if (feedEpisode) {
+                      feedEpisode.appleURL = info.attributes.url
+                    }
+                  }
+                })
               }
             } catch (err) {
               this.error = err.message
@@ -275,7 +286,7 @@
           try {
             filename = `${filename.split('.').shift()}.${gutil.assetsuffix(url)}`
             const [response, whatevs] = await Promise.all([
-              fetch(corsProxy + url),
+              fetch(gutil.CORS_PROXY + url),
               new Promise(resolve => setTimeout(resolve, 50)) // ensures user will see downloading state
             ])
             const blob = await response.blob()

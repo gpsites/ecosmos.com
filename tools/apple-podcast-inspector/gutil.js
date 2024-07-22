@@ -1,10 +1,15 @@
+const CORS_PROXY = 'https://corsify.gregperk.workers.dev/?'
+
 
 window.gutil = {
   xml2js,
   slug,
   assetsuffix,
-  ding
+  ding,
+  fetchAllApplePodcastEpisodes,
+  CORS_PROXY
 }
+
 
 function assetsuffix(url) {
   // let's start by just assuming (hoping) filename is last thing before any url queryargs
@@ -172,4 +177,96 @@ function ding () {
 
   // Fade out
   gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.5);
+}
+
+async function getAppleAPIToken() {
+  try {
+    const response = await fetch(CORS_PROXY + 'https://podcasts.apple.com/us/podcast/randos-read/id1725933732');
+    
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    const html = await response.text();
+    const m = html.match(/<meta name="web-experience-app\/config\/environment" content="([\s\S]+?)">/);
+    
+    if (!m) {
+      throw new Error('Could not find token');
+    }
+
+    const obj = JSON.parse(decodeURIComponent(m[1]));
+    return obj.MEDIA_API?.token;
+  } catch (error) {
+    console.error('Error fetching token:', error);
+    throw error;
+  }
+}
+
+
+function buildRequest(appleAPIToken, applePodcastID, offset) {
+  const hostName = 'https://amp-api.podcasts.apple.com'
+
+  return {
+    url: `${CORS_PROXY}${hostName}/v1/catalog/us/podcasts/${applePodcastID}/episodes?l=en-US&offset=${offset}`,
+    hostName,
+    headers: {
+      'Authorization': `Bearer ${appleAPIToken}`,
+      'Accept': 'application/json',
+      'x-cors-headers': JSON.stringify({
+        'Origin': 'https://podcasts.apple.com',
+        'Referer': 'https://podcasts.apple.com',
+      })
+    }
+  }
+}
+
+async function fetchAllApplePodcastEpisodes(applePodcastID, totalCount = undefined) {
+  const appleAPIToken = await getAppleAPIToken()
+
+  if (totalCount === undefined) {
+    return fetchApplePodcastEpisodesSerial(applePodcastID, appleAPIToken)
+  } else {
+    return fetchApplePodcastEpisodesParallel(applePodcastID, appleAPIToken, totalCount)
+  }
+}
+
+async function fetchApplePodcastEpisodesSerial(applePodcastID, appleAPIToken) {
+  let allData = []
+  let { hostName, url, headers } = buildRequest(appleAPIToken, applePodcastID, 0)
+
+  try {
+    while (url) {
+      const response = await fetch(url, { headers })
+      const { data, next } = await response.json()
+
+      if (data) { allData = [...allData, ...data] }
+      url = next ? `${hostName}${next}` : null
+    }
+
+    return allData
+  } catch (error) {
+    console.error('Error fetching episodes:', error)
+    throw error
+  }
+}
+
+async function fetchApplePodcastEpisodesParallel(applePodcastID, appleAPIToken, totalCount) {
+  const itemLimitPerRequest = 10
+  const maxConcurrentRequests = 6
+
+  const todo = Array.from({ length: Math.ceil(totalCount / itemLimitPerRequest) }, (_, i) => i)
+  const results = Array.from({ length: todo.length })
+
+  const workers = Array.from({ length: maxConcurrentRequests }, async () => {
+    while (todo.length > 0) {
+      const idx = todo.shift()
+      const { url, headers } = buildRequest(appleAPIToken, applePodcastID, idx * itemLimitPerRequest)
+      const response = await fetch(url, {headers})
+      const { data } = await response.json()
+      results[idx] = data
+    }
+  })
+
+  await Promise.all(workers)
+  return results.flat()
 }
