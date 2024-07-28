@@ -254,7 +254,7 @@
                   author: channel['itunes:author'],
                   summary: channel['itunes:summary'],
                   episodes: channel.item.map(episode => ({
-                    guid: episode.guid?.['#text'],
+                    guid: episode.guid?.['#text'] ?? episode.guid?.['#cdata'],
                     title: episode.title?.['#cdata'] ?? episode.title,
                     description: episode.description?.['#cdata'] ?? episode.description,
                     pubDate: episode.pubDate,

@@ -63,7 +63,11 @@ function xml2js(xmlStr, excludeKeys = new Set(), jsonifyKeys = false) {
         if (!xml.attributes.length && !xml.firstChild) o = null
       } else if (xml.nodeType == 9) {
         o = X.toObj(xml.documentElement)
-      } else alert('unhandled node type: ' + xml.nodeType)
+      } else if (xml.nodeType == 8) {
+        o['#comment'] = X.escape(xml.nodeValue)
+      } else {
+        alert('unhandled node type: ' + xml.nodeType) 
+      }
       return o
     },
     toJson: function (o, name, ind) {
