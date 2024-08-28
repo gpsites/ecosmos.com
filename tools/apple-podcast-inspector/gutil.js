@@ -186,24 +186,24 @@ function ding () {
 
 async function getAppleAPIToken() {
   try {
-    const response = await fetch(CORS_PROXY + 'https://podcasts.apple.com/us/podcast/randos-read/id1725933732');
-    
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
+    const response1 = await axios.get('https://podcasts.apple.com/us/podcast/randos-read/id1725933732')
+    const match1 = response1.data.match(/<script[^>]*?\ssrc="(\/assets\/index[^"]*\.js)"/)
+    if (!match1) {
+      throw new Error('Could not find index.js script')
     }
 
-    const html = await response.text();
-    const m = html.match(/<meta name="web-experience-app\/config\/environment" content="([\s\S]+?)">/);
-    
-    if (!m) {
-      throw new Error('Could not find token');
+    const response2 = await axios.get(`https://podcasts.apple.com/${match1[1]}`)
+    const match2 = response2.data.match(/"([A-Za-z0-9-_]{10,}\.[A-Za-z0-9-_]{10,}\.[A-Za-z0-9-_]{10,})"/) // pick out the fallback jwt they have in this script
+    if (!match2) {
+      throw new Error('Could not find token in index.js script')
     }
 
-    const obj = JSON.parse(decodeURIComponent(m[1]));
-    return obj.MEDIA_API?.token;
+    return match2[1]
   } catch (error) {
-    console.error('Error fetching token:', error);
-    throw error;
+    console.error('Error fetching Apple API token:', error.message)
+    // this means that something may have changed in how Apple sets up anonymous access to their API
+    await postMessageToSlack('#bugs', `Could not find Apple API access token for retrieving Apple Podcasts episode links`)
+    throw error
   }
 }
 
