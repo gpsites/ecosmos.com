@@ -339,7 +339,7 @@ When we push at *this *issue long enough, it really comes down to understandin
 and regularity *as such*.
 
 When Phil Donahue asked Rand about the Argument from Design, she responded in her characteristic
-way by cutting right through to the essential issue: "What would a *disorderly *universe would look
+way by cutting right through to the essential issue: "What would a *disorderly *universe look
 like? How could our universe be anything *but *orderly?"
 
 Let's creep up on this. The reason this and the first-cause argument seem to have a lot in common
