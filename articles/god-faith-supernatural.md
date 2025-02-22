@@ -996,9 +996,9 @@ expecting to find it here, in the world.
 
 *Notes*
 
--   *This lecture was originally delivered at The Objectivist Center's annual conference in 2003.
-    Since then my opinion of TOC has plummeted dramatically, so please don't take this as a blanket
-    endorsement of the organization.*
+-   *This lecture was originally delivered at the 2003 annual conference of The Atlas Society,
+    at that time named The Objectivist Center, and originally named The Institute for Objectivist Studies.
+    Since then, my opinion of the organization has diminished.*
 
 1.  *Letters of Ayn Rand*, Michael Berliner, ed. (1995)
 2.  "The Objectivist", 9/71
